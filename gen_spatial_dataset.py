@@ -50,8 +50,8 @@ if __name__=='__main__':
     # Define the range of resource sizes and shapes
     size_bounds, shape_bounds = (.5,2), (.5,2)
     pos_x_bounds, pos_y_bounds = (-1,1), (-1,1)
-    size_bounds2, shape_bounds2 = (.05,.1), (.75,1.5)
-    pos_x_bounds2, pos_y_bounds2 = (-.75,.75), (-.75,-.25)
+    size_bounds2, shape_bounds2 = (.1,.15), (.75,1.5)
+    pos_x_bounds2, pos_y_bounds2 = (-.75,.75), (-.6,-.1)
 
     # Generate the resource gradients
     gradients1 = gen_resources(world_size, resolution, size_bounds, shape_bounds,
