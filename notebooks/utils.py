@@ -23,3 +23,11 @@ def plot_predictions(train_y, model_predictions, n_contexts):
         fig.add_trace(px.imshow(model_predictions[context_idx]).data[0],row=context_idx//2+1,col=2+2*(context_idx%2))
     fig.update_layout(height=300*n_rows,width=300*4)
     fig.show()
+
+def plot_contexts(context_data):
+    n_rows = max(1,context_data.shape[0]//4+ int((context_data.shape[0]%4)>0))
+    fig = make_subplots(rows=n_rows,cols=4)
+    for context_idx in range(context_data.shape[0]):
+        fig.add_trace(px.imshow(context_data[context_idx]).data[0],row=context_idx//4+1,col=1+context_idx%4)
+    fig.update_layout(height=300*n_rows,width=300*4)
+    fig.show()
